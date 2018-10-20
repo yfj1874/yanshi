@@ -6,23 +6,60 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        div{
+        /* div{
             width: 200px;
             height: 300px;
             background:red;
             padding: 30px;
-            border:5px double black;
+            border:5px dashed black;
             margin: 50px;
+            /*标准盒模型
+             box-sizing:content-box;*/
+             /* 怪异盒模型
+             box-sizing:border-box;
 
-        }
+    }       */
+    #div3{
+        width: 100px;
+        height: 100px;
+        background: red;
+        margin-top:20px;
+        overflow: hidden;/*溢出隐藏*/
+        text-overflow: ellipsis;/*文本溢出。。。*/
+        white-space:nowrap;
+
+    }
+    #div2{
+        width: 200px;
+        height: 200px;
+        background:pink;
+        margin-top:10px;
+        overflow: hidden;
+          /* 外边距合并
+            1.父元素overflow:hidden;
+            2.父元素加边框
+            3.父元素 或者子元素浮动
+            4.父元素 或者子元素定位
+        */
+    }
+    #div1{
+        width: 200px;
+        height: 50px;
+        white-space: nowrap;/*强制显示在一行*/
+        background: blue;
+    }
     </style>
 </head>
 <body>
-    <div id="div1">
-        hhhhhh
-    </div>
-    <div>
-        uuuuu
+     <div id="div1">
+         kjdfbkjdfhks   ksdjlksdhla
+         ksslkajldsajdljl
+     </div>
+    <div id="div2">
+        <div id="div3">
+             qazwsxwsxgjkgkxghcmvsdfghkkmnvc
+        </div>
+
     </div>
     <div>
         ooooo

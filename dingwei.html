@@ -5,49 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        body{
-            width: 500px;
-            height: 600px;
-            background:white;
-        }
-        div{
-            widows: 50px;
-            height: 30px;
-            display: inline-block;
-        }
-    #div1{
-        background: black;
+<style>
+    *{
+        margin:0;
+        padding:0;
     }
-    #div2{
-        background:pink;
-        /*position: relative;相对定位，相对自己原来的位置移动，不释放空间
-        left:30px;
-        top:50px;
-           absolute 绝对定位 相对于最近的定位的祖先元素，没有的话相对于body释放空间
-           fix 相对于浏览器 释放空间
-          static 默认 */
-        position: absolute;
-        left:100px;
-        top:100px;
+    body{
+        height:500px;
     }
-    #div3{
-        background: gray;
-    }
-    /*display:block; 块级元素自己占一行可以设置宽高
-      display:inline; 行级元素 多个占一行  不能设置宽高
-      display；inline-block */
-    </style>
+div{
+    display: inline-block;
+    width:50px;
+    height: 50px;
+}
+#div1{
+    background: pink;
+
+}
+#div2{
+    background: purple;
+    /* position:relative;
+    left: 30px;
+    top: 50px; */
+    position: absolute;
+    left:100px;
+    top:50px;
+}
+#div3{
+    background: blueviolet;
+}
+
+</style>
 </head>
 <body>
     <div id="div1">
         11111
     </div>
     <div id="div2">
-            22222
+        22222
     </div>
     <div id="div3">
-           33333
+        33333
     </div>
 </body>
 </html>

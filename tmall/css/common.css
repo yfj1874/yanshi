@@ -2,14 +2,76 @@
     margin: 0;
     padding: 0;
 }
-ul{
-    list-style: none;
+body{
+    font: 12px/1.5 tahoma,arial,"\5b8b\4f53";
 }
 .banner{
-    background: #ff2f7c;
+    /* text-align: center; */
+    background:#ff2f7c;
 }
 .banner img{
     display: block;
-    margin: 0 auto;
+    margin:0 auto;
+}
 
+.div0{
+    background:  #f2f2f2;
+    box-shadow: 0 2px 1px 0 rgba(0, 0 ,0 ,0.30);
+    height: 40px;
+}
+.div1{
+    width: 1230px;
+    margin: 0 auto;
+}
+.login-in{
+    font-size: 12px;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    width: 
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none
+}
+.header-list{
+    float: right;
+}
+.header-list li{
+    float: left;
+    line-height: 40px;
+    /* padding:0 15px 0 20px; */
+}
+.login-in span,.login-in a{
+    color:#999;
+}
+.login-in a{
+    padding-left:20px; 
+}
+.header-list li>a{
+    padding:0 15px 0 20px;
+    display: block;
+    color:#999;
+}
+.header-list li a:hover{
+    color:red;
+}
+.list-menu a:hover{
+    background: #fff;
+}
+.header-list .list-menu .jiantou{
+    height: 0px;
+    width: 0px;
+    border: 3px solid transparent ;
+    border-top-color:#999;
+    display: inline-block;
+    transition: 0.3s ease;
+    
+
+}
+.header-list .list-menu:hover .jiantou{
+    transform:rotate(180deg);
+    transform-origin: 50% 25%
 }

@@ -5,64 +5,237 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <div class="banner">
         <a href="#">
-        <img src="C:\Users\87966\Pictures\Camera Roll\t.jpg" alt="卡了" title="图片">
-       </a>
+            <img src="images/banner.jpg" alt="图片加载不出来的时候显示我" title="鼠标划入等一会">
+        </a>
     </div>
-    <div class="div0">
-        <div class="div1">
-            <div class="login-in">
-                <span>嘿，天猫</span>
-                <a href="#">请注册</a>
-                <a href="#">登陆</a>
+    <div id="header">
+        <div class="wrapper">
+            <div class="header-login">
+                <span>喵，欢迎来天猫</span>
+                <a href="#">请登录</a>
+                <a href="#">免费注册</a>
             </div>
-            
-            <div class="header-list">
-                    <ul>
-                        <li class="list-menu">
-                        <a href="#" >
-                            我的淘宝
-                            <div class="jiantou"></div>
-                        </a>
+            <ul class="header-list">
+                <li class="list-menu">
+                    <a href="#">
+                        我的淘宝
+                    </a>
+                    <span class="arrow"></span>
+                    <ul class="sub-list">
+                        <li>
+                            <a href="#">已买到的宝贝</a>
+                        </li>
+                        <li>
+                            <a href="#">已卖出的宝贝</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="iconfont icon-gouwucheman"></i>
+                        购物车
+                    </a>
+                </li>
+                <li class="list-menu">
+                    <a href="#">收藏夹</a>
+                    <span class="arrow"></span>
+                </li>
+                <li class="list-tel">
+                    <a href="#">
+                        <i class="iconfont icon-shouji"></i>
+                        手机版
+                    </a>
+                    <div class="sub-qr">
+                        <img src="images/tel.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <a href="#">淘宝网</a>
+                </li>
+                <li class="list-menu">
+                    <a href="#">商家支持</a>
+                    <span class="arrow"></span>
+                </li>
+                <li class="list-menu list-menu-no">
+                    <a href="#">网站导航</a>
+                    <span class="arrow"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="search">
+        <div class="logo">
+            <img src="images/logo.gif" alt="" >
+        </div>
+        <div class="search-box">
+            <div class="clearfix">
+                <input class="search-txt" type="text" placeholder="搜索 天猫 商品/品牌/店铺">
+                <button class="search-btn">搜索</button>
+            </div>
+            <ul class="search-list clearfix">
+                <li><a href="#">针织衫</a></li>
+                <li class="red"><a href="#">连衣裙</a></li>
+                <li><a href="#">四件套</a></li>
+                <li class="red"><a href="#">摄像头</a></li>
+                <li><a href="#">针织衫</a></li>
+                <li class="red"><a href="#">客厅灯</a></li>
+                <li><a href="#">口红</a></li>
+                <li class="red"><a href="#">手机</a></li>
+                <li><a href="#">牛奶</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="inner-cont">
+        <a href="#">
+            <img src="images/supermarket.png" alt="">
+        </a>
+        <a href="#">
+            <img src="images/international.png" alt="">
+        </a>
+        <a href="#">
+            天猫会员
+        </a>
+        <a href="#">
+            电器城
+        </a>
+        <a href="#">
+            苗先生
+        </a>
+        <a href="#">
+            医药馆
+        </a>
+        <a href="#">
+            营业厅
+        </a>
+    </div>
+
+    <div class="content">
+        <div class="slide-content">
+            <!-- 左侧列表 -->
+            <div class="category">
+                <div class="cate-title">商品分类</div>
+                <ul class="main-cate-box">
+                    <li class="main-cate">
+                        <i class="iconfont icon-shouji"></i>
+                        <a href="#"> 女装/</a> <a href="#"> 内衣</a>
+                        <div class="cate-sub-list">
+                            <div class="list-left">
+                                <div class="list-left-row">
+                                    <div class="left-list-title">
+                                    当季流行 
+                                    </div>
+                                    <ul class="left-list-content">
+                                        <li><a href="#">夏季新品</a></li>
+                                        <li><a href="#">夏季新品</a></li>
+                                        <li><a href="#">夏季新品</a></li>
+                                        <li><a href="#">夏季新品</a></li>
+                                        <li><a href="#">夏季新品</a></li>
+                                        <li><a href="#">夏季新品</a></li>
+                                        <li><a href="#">夏季新品</a></li>
+                                        <li><a href="#">夏季新品</a></li>
+                                        <li><a href="#">夏季新品</a></li>
+                                        <li><a href="#">夏季新品</a></li>
+                                    </ul>
+                                </div>
+                                <div class="list-left-row">
+                                    <div class="left-list-title">
+                                        当季流行 
+                                    </div>
+                                    <ul class="left-list-content">
+                                        <li><a href="#">夏季新品</a></li>
+                                        <li><a class="special-color" href="#">夏季新品</a></li>
+                                        <li><a href="#">夏季新品</a></li>
+                                        <li><a href="#">夏季新品</a></li>
+                                        <li><a href="#">夏季新品</a></li>
+                                        <li><a href="#">夏季新品</a></li>
+                                        <li><a href="#">夏季新品</a></li>
+                                        <li><a href="#">夏季新品</a></li>
+                                        <li><a href="#">夏季新品</a></li>
+                                        <li><a href="#">夏季新品</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="list-right">
+
+                            </div>
+                        </div>
                     </li>
-                    
-                    <li>
-                      
-                        <a href="#">
-                                <i class="iconfont icon-gouwuche"></i>
-                                购物车
-                        </a>
+                    <li class="main-cate">
+                        <i class="iconfont icon-shouji"></i>
+                        <a href="#"> 男装 /运动户外</a>
+                        <div class="cate-sub-list">
+                         222   
+                        </div>
                     </li>
-                    <li class="list-menu">
-                        <a href="#">收藏夹</a>
+                    <li class="main-cate"><i class="iconfont icon-shouji"></i><a href="#"> 女鞋 /男鞋 /箱包</a></li>
+                    <li class="main-cate"><i class="iconfont icon-shouji"></i><a href="#"> 男装 /运动户外</a></li>
+                    <li class="main-cate"><i class="iconfont icon-shouji"></i><a href="#"> 男装 /运动户外</a></li>
+                    <li class="main-cate"><i class="iconfont icon-shouji"></i><a href="#"> 男装 /运动户外</a></li>
+                    <li class="main-cate"><i class="iconfont icon-shouji"></i><a href="#"> 男装 /运动户外</a></li>
+                    <li class="main-cate"><i class="iconfont icon-shouji"></i><a href="#"> 男装 /运动户外</a></li>
+                    <li class="main-cate">
+                        <i class="iconfont icon-shouji"></i>
+                        <a href="#"> 女装 /内衣</a></li>
+                    <li class="main-cate">
+                        <i class="iconfont icon-shouji"></i>
+                        <a href="#"> 男装 /运动户外</a>
                     </li>
-                    <li>
-                        
-                        <a href="#">
-                                <i class="iconfont icon-shouji"></i>手机版</a>
+                    <li class="main-cate">
+                        <i class="iconfont icon-shouji"></i>
+                        <a href="#"> 女装 /内衣</a>
                     </li>
-                    <li>
-                        <a href="#">淘宝网</a>
+                    <li class="main-cate">
+                        <i class="iconfont icon-shouji"></i>
+                        <a href="#"> 男装 /运动户外</a>
                     </li>
-                    <li>
-                        <a href="#">商家支持</a>
+                    <li class="main-cate">
+                        <i class="iconfont icon-shouji"></i>
+                        <a href="#"> 女装 /内衣</a>
                     </li>
-                    <li class="list-menu">
-                        <a href="#">网站导航</a>
+                    <li class="main-cate">
+                        <i class="iconfont icon-shouji"></i>
+                        <a href="#"> 男装 /运动户外</a>
                     </li>
-    
-    
-    
+                    <li class="main-cate">
+                        <i class="iconfont icon-shouji"></i>
+                        <a href="#"> 女装 /内衣</a>
+                    </li>
+
                 </ul>
             </div>
+            <!-- 轮播图 -->
+            <div class="slide-box">
+                <div class="slide-img-box">
+                    <a href="#">
+                        <img src="images/lunbo1.jpg" alt="">
+                    </a>
+                    <a href="#">
+                            <img src="images/lunbo2.jpg" alt="">
+                        </a>
 
+                </div>
+                <div>
+                    <ul class="slide-btn-box">
+                        <li>11</li>
+                        <li>22</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
-</body>
-</html>
+
+
+
+
+
+
+    <!-- <a class="banner1" href="#">
+    </a> -->

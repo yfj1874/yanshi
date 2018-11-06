@@ -157,3 +157,6 @@ body{
 .list-tel:hover .sub-qr{
     display: block;
 }
+.wrapper{
+    margin: 0 auto;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    function j(x){
+        if(x<14){
+            alert('儿童');
+        }
+        if(x>=14&&x<24){
+            alert('青少年');
+        }
+        if(x>=24&&x<40){
+            alert('青年');
+        }
+        if(x>=40&&x<60){
+            alert('中年');
+        }
+        if(x>60){
+            alert('老年');
+        }
+
+    }
+
+    var num= prompt('请输入年龄');
+      alert(j(num));
+    </script>
+</body>
+</html> 

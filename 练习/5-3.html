@@ -8,16 +8,18 @@
 </head>
 <body>
     <script>
-    var i=j=1;
-    function a(){
-    for(j=1;j<=5;j++){
-        for(i=1;i<=j;i++){
-            document.writeln(i);
+    function fib(n){
+        if(n<=2){
+            return 1;
         }
-        document.write('<br/>');
+        var f1=1,f2=1,temp;
+        for(var i=3;i<=n;i++){
+            temp=f1+f2;
+            f1=f2;
+            f2=temp;
+        }
+        return f2;
     }
-    }
-    a();
     </script>
 </body>
 </html>

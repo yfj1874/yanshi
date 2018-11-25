@@ -8,16 +8,20 @@
 </head>
 <body>
     <script>
-    var i=j=1;
-    function a(){
-    for(j=1;j<=5;j++){
-        for(i=1;i<=j;i++){
-            document.writeln(i);
+        function min(x,y){
+            if(x<y){
+                return x;
+            }
+            else{
+                return y;
+            }
         }
-        document.write('<br/>');
-    }
-    }
-    a();
+        var x = prompt("x=");
+        var y = prompt("y=");
+            alert( min(x,y));
+       
+   
+   
     </script>
 </body>
 </html>

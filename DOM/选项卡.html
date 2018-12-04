@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        float: left;
+        height:30px;
+        width: 45px;
+        background: gray;
+        list-style: none;
+        margin: 5px;
+    }
+    ul{
+        overflow: hidden;
+    }
+    ul .selected{
+        background: pink;
+    }
+    #content div{
+        height: 150px;
+        width: 160px;
+        background: plum;
+        display: none;
+    }
+    #content .active{
+        display: block;
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <ul id="ul-box">
+            <li class="selected">111</li>
+            <li>222</li>
+            <li>333</li>
+        </ul>
+        <div id="content">
+            <div class="active">aaa</div>
+            <div>bbb</div>
+            <div>ccc</div>
+        </div>
+    </div>
+    <script>
+    var aLi=document.getElementsByTagName('li');
+    var oContent=document.getElementById('content');
+    var oActive=oContent.getElementsByTagName('div');
+    for(var i=0;i<aLi.length;i++){
+          aLi[i].index=i;
+          aLi[i].onclick=function(){
+              for(var j=0;j<aLi.length;j++){
+                  aLi[j].className="";
+                 oActive[j].className="";
+              }
+              this.className="selected";
+              oActive[this.index].className="active"
+              
+          }
+
+    }
+    </script>
+</body>
+</html>

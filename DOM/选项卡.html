@@ -55,16 +55,14 @@
     for(var i=0;i<aLi.length;i++){
           aLi[i].index=i;
           aLi[i].onclick=function(){
-              for(var j=0;j<aLi.length;j++){
-                  aLi[j].className="";
-                 oActive[j].className="";
-              }
-              this.className="selected";
-              oActive[this.index].className="active"
-              
-          }
-
+            for(var j=0; j<aBtn.length; j++){
+                aBtn[j].className = "";
+                aImg[j].className = "";
+            }
+            aBtn[idx].className = "selected";
+            aImg[idx].className = "active";
     }
     </script>
 </body>
+
 </html>

@@ -213,8 +213,20 @@
    
     width: 200px;
     margin-left:-100px;
-    background:yellow;
+    
+    overflow: hidden;
    
+}
+.slide-btn-box li{
+    list-style: none;
+    float: left;
+    background: rgba(0,0,0, 0.3);
+    height: 18px;
+    width: 18px;
+    font-size: 14px;
+    margin-right: 5px;
+    text-align: center;
+    cursor: pointer;
 }
 .brand-sale{
     margin-top: 30px;

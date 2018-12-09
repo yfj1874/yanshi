@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    #container{
+        position: relative;
+        margin: 0 auto;
+        width: 520px;
+    }
+    img{
+        height: 280px;
+        width: 520px;
+        display: none;
+    }
+
+    li{
+        list-style: none;
+        float: left;
+        background: rgba(0,0,0, 0.3);
+        height: 18px;
+        width: 18px;
+        font-size: 14px;
+        margin-right: 5px;
+        text-align: center;
+    }
+    .active{
+        display: block;
+    }
+    #btn-box{
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+    }
+    #btn-box .selected{
+       background: rgba(200,0,0, 0.3)
+    }
+    #arrow-box{
+            position: absolute;
+            left:10px;
+            bottom:10px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <div id="img-box">
+            <img class="active" src="img/1.jpg">
+            <img src="img/2.jpg">
+            <img src="img/3.jpg">
+            <img src="img/4.jpg">
+        </div>
+        <div id="btn">
+            <ul id="btn-box">
+                <li class="selected">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+            <ul id="arrow-box">
+                    <li>&lt;</li>
+                    <li id="next">&gt;</li>
+                </ul>
+            <script>
+               var sele=document.getElementsByTagName('li');
+               var im=document.getElementsByTagName('img');
+               for(var i=0;i<sele.length;i++){
+                   sele[i].idx=i;
+                   sele[i].onclick=function(){
+                     for(var j=0;j<sele.length;j++){
+                         sele[j].className="";
+                         im[j].className="";
+                     }
+                     this.className="selected";
+                     im[this.idx].className="active";
+                   }
+               }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

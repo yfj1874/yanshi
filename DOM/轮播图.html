@@ -65,22 +65,19 @@
                 <li>3</li>
                 <li>4</li>
             </ul>
-            <ul id="arrow-box">
-                    <li>&lt;</li>
-                    <li id="next">&gt;</li>
-                </ul>
+
             <script>
                var sele=document.getElementsByTagName('li');
-               var im=document.getElementsByTagName('img');
+               var aIm=document.getElementsByTagName('img');
                for(var i=0;i<sele.length;i++){
                    sele[i].idx=i;
                    sele[i].onclick=function(){
                      for(var j=0;j<sele.length;j++){
                          sele[j].className="";
-                         im[j].className="";
+                         aIm[j].className="";
                      }
                      this.className="selected";
-                     im[this.idx].className="active";
+                     aIm[this.idx].className="active";
                    }
                }
             </script>

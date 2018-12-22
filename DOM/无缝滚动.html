@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    #container{
+        width: 400px;
+        height: 200px;
+        border: 1px solid black;
+        margin: 100px auto;
+        position: relative;
+        overflow: hidden;
+    
+    }
+    ul{
+        width: 520px;
+        position: absolute;
+    }
+    li{
+        float: left;
+        list-style: none;
+        height: 120px;
+        width: 120px;
+        background: pink;
+        margin-right: 10px;
+
+    }
+    #btn-box{
+        margin: 136px 94px;
+
+    }
+    span{
+        width: 100px;
+            height: 50px;
+            background: palevioletred;
+            display: inline-block;
+    }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+         <ul id="num-box">
+             <li>1 </li>
+             <li>2</li>
+             <li>3 </li>
+             <li>4</li>
+         </ul>
+         <div id="btn-box">
+             <span id="left">向左</span>
+             <span id="right">向右</span>
+         </div>
+    </div>
+    <script>
+    var oNum=document.getElementById('num-box');
+    var oLeft=document.getElementById('left');
+    var oRight=document.getElementById('right');
+    oNum.innerHTML+=oNum.innerHTML;
+    oNum.style.width=oNum.offsetWidth*2+"px";
+    var speed= -3;
+    setInterval(function(){
+        oNum.style.left=oNum.offsetLeft+speed+"px";
+        if(oNum.offsetLeft<=-oNum.offsetWidth/2){
+            oNum.style.left=0;
+        }
+        if(oNum.offsetLeft>0){
+            oNum.style.left=-oNum.offsetWidth/2+"px";
+        }
+    },20)
+    oRight.onclick = function(){
+            speed = 3;
+        }
+        oLeft.onclick = function(){
+            speed = -3;
+        }
+    </script>
+</body>
+</html>

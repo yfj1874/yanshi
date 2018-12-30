@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding:0;
+    list-style: none;
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('icon/iconfont.eot');
+    src: url('icon/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('icon/iconfont.woff') format('woff'),
+    url('icon/iconfont.ttf') format('truetype'),
+    url('icon/iconfont.svg#iconfont') format('svg');
+  }
+  .iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+#container{
+    height: 600px;
+    width: 100%;
+}
+#form-control{
+    border-radius:5px;
+    margin: 5px auto;
+    display: block;
+    height: 28px;
+    width: 200px;
+}
+#list-one{
+    list-style: none;
+    background:white;
+    width: 20%;
+
+}
+#list-one li{
+    display: block;
+    height: 50px;
+    width: 80px;
+    border: 1px ;
+    box-shadow: 1px 1px 1px rgb(209, 207, 207);
+    text-align: center;
+    line-height: 50px;
+    border-radius: 2px;
+}
+#content-one{
+    width: 80%;
+    height: 350px;
+    overflow: scroll;
+    
+}
+#content-one div{
+    display: none;
+}
+#content-one .list-main{
+    display: block;
+}
+#picture-list img{
+    display: block;
+    height: 100px;
+    width: 200px;
+    float: left;
+   
+}
+#picture-list{
+
+    height: 100px;
+    width: 800px;
+}
+#pic{
+    height: 100px;
+    width: 200px; 
+    overflow: hidden;
+}
+#content-one{
+    position: absolute;
+    left: 100px;
+    top: 150px;
+}
+#content-one img{
+   display: block;
+   height: 100px;
+   width: 120px;
+
+}
+.oli{
+
+    position: relative;
+    margin-top: 15px;
+}
+.oli button{
+    color: #8c96a0;
+    text-shadow:1px 1px 1px #fff;
+    border:1px solid #dce1e6;
+    box-shadow: 0 1px 2px #fff inset,0 -1px 0 #a8abae inset;
+    background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);
+    background: -moz-linear-gradient(top,#f2f3f7,#e4e8ec);
+    background: linear-gradient(top,#f2f3f7,#e4e8ec);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.oli span{
+    position: absolute;
+    top: 5px;
+    left: 125px;
+    display: inline-block;
+    width: 80px;
+    height: 50px;
+    font-size: 14px;
+
+}
+.oli .miaoshu{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 30px;
+    left: 125px;
+    font-size: 12px;
+    color:rgb(65, 63, 63);
+}
+.oli button{
+    position: absolute;
+    left: 230px;
+    top: 75px;
+
+}
+.oli .jiage{
+    position: absolute;
+    left: 125px;
+    top: 80px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(255, 8, 0);
+}

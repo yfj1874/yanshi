@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    textarea{
+        height: 50px;
+        border: 1px black solid;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="big">放大</button>
+        <button id="small">缩小</button>
+        </br>
+        <textarea>多行文本高度变化可考虑的脑残啊能看出看来是农村快餐死哦今年初卡拉卡斯充满了色彩看看村民挠我扩散开来你</textarea>
+    </div>
+    
+    <script src="jquery-1.12.4.js"></script>
+
+    <script>
+     
+     $("#big").on('click',function(){
+            var h = $("textarea").height();
+            if(h < 500){
+                $("textarea").height( h+50 );
+            }
+        })
+     $("#small").on('click',function(){
+         var h=$('textarea').height();
+         $('textarea').height(h-50);
+     })  
+    </script>
+</body>
+</html>

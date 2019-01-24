@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    display: y\=9il68-lex;
+    flex-direction: column;
+ 
+}
+#title{
+   flex: 1;
+   width: 100%;
+    float: left;
+    position: relative;
+    background: green;
+}
+#content{
+    background: #000;
+    flex:1;
+}
+#other{
+    flex: 1;
+    background: red;
+}
+#title img{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+
+}
+#title span{
+    position: absolute;
+    top: 30px;
+    left: 70px;
+    font-size: 10px;
+    color: rgb(124, 121, 121);
+}
+#title input{
+    position: absolute;
+    top: 30px;  
+    left: 110px;
+}

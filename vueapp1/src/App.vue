@@ -1,11 +1,11 @@
 <template>
   <div id="app">
   
-  <c-header :bgc="bgc"></c-header>
+  <c-header :obj="obj"></c-header>
   <div id="content">
     <router-view ></router-view>
   </div>
-   <c-footer :menu="menu" @changeBg="color"></c-footer>
+   <c-footer :menu="menu" @changeBg="color" :color="obj.bgColor"></c-footer>
 
   </div>
 </template>
@@ -30,15 +30,19 @@ export default {
                 {
             path:"/book",
              name:"书籍",
-          bgColor:"pink",
+          bgColor:"#4abcd8",
         },
                 {
             path:"/photo",
              name:"照片",
-          bgColor:"black",
+          bgColor:"#96c2f1",
         },
       ],
-      bgc:""
+      obj:{
+          path:"/movie",
+          name:"电影",
+          bgColor:"red",
+      }
       
       
     }
@@ -49,11 +53,20 @@ export default {
   CFooter
  },
    methods:{
-    color(bg){ 
-      console.log(bg);
-      this.bgc=bg;
+    color(obj){ 
+      this.obj=obj;
     }
   },
+  created(){
+    let result=this.menu.filter((obj,index)=>{
+      return obj.path==this.$route.path;
+
+    });
+    if(result.length){
+      this.obj=result[0];
+    }
+    
+  }
 }
 </script>
 <style scoped>

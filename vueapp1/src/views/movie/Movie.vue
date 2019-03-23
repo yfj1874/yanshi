@@ -1,7 +1,7 @@
 <template>
     <div>
        <ul id="container">
-           <li v-for="(obj,index) in moveList" :key="index">
+           <li v-for="(obj,index) in moveList" :key="index" @click=" goDetail(obj.id)">
             <img :src=" obj.images.small" alt="">
             <div class="info">
                 <h3>{{obj.title}} </h3>
@@ -18,6 +18,8 @@
            </li>
        </ul>
        <img class="loading" v-show="isShow" src="@/assets/img/loading.gif" alt="">
+       <div v-show="isBottom">加载完了</div>
+      
     </div>
 </template>
 
@@ -29,41 +31,41 @@ import Axios from "axios";
               
               moveList:[],
               isShow:false,
+             isBottom:false,
           }  
         },
         created(){
           this. getMovie();
 
             window.onscroll= () =>{
-                if(document.documentElement.scrollTop+document.documentElement.clientHeight==document.documentElement.scrollHeight){
+                
+                if(document.documentElement.scrollTop+document.documentElement.clientHeight==document.documentElement.scrollHeight&& !this.isBottom){
                       this. getMovie();
                 }
+                
             }
         },
         methods:{
                        getMovie() {
                          this. isShow=true;
                         Axios.get("https://bird.ioliu.cn/v1?url=https://api.douban.com/v2/movie/in_theaters?start="+this.moveList.length+"&count=10")
-            .then((result)=>{
-                console.log(result);
-                this.moveList=[...this.moveList,...result.data.subjects];
-                this. isShow=false;
-            })
-            .catch();
+                          .then((result)=>{
+                           this.moveList=[...this.moveList,...result.data.subjects];
+                            this. isShow=false;
+                              if(this.moveList.length==result.data.total){
+                           this.isBottom=true;
+                      }
+                         })
+                        .catch();
            
 
+        }, 
+                    goDetail(id){
+                this.$router.push('/moviedetail/'+id);
+            }
         }
-
-        }
-                      
- 
-
-    
-   
     }
-
-
-</script>
+  </script>
     
 <style scoped>
         #container{

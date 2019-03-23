@@ -1,15 +1,40 @@
 <template>
     <div>
-       音乐
+       <img v-for="(obj,index) in music"  :key="index" :src="obj.bg" @click="getmusic">
     </div>
 </template>
 
 <script>
+import Axios from "axios";
     export default {
+        data(){
+            return{
+                music:[],
+            }
+        },
+        
+        created(){
+            Axios.get("/data/musiclist.json")
+            .then((result)=>{
+                console.log(result);
+                this.music=result.data.albums
+
+
+            })
+            .catch();
+
+        },
+        methods:{
+            getmusic(){
+             this.$router.push('/musiclist')
+            }
+        }
         
     }
 </script>
 
 <style scoped>
-
+img{
+    width:50%;
+}
 </style>
